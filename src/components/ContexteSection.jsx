@@ -2,19 +2,19 @@ const enjeux = [
   {
     title: 'Rôle central de France Travail',
     text:
-      'France Travail (ex-Pôle Emploi) gère des données sensibles de millions de citoyens français. Ce sont des informations directement liées à la vie administrative, professionnelle et personnelle des usagers.',
+      'France Travail (ex-Pôle Emploi) gère des données sensibles de millions de citoyens français. Ce sont des informations directement liées à la vie administrative, professionnelle et personnelle des usagers. Le point central est que des identifiants de conseiller Cap Emploi ont été compromis, puis utilisés pour accéder au système de manière beaucoup plus large que la simple base d’une région ou d’un département. L’erreur n’était pas limitée à un périmètre local : elle a permis un accès à l’échelle nationale.',
     source: 'France Travail',
   },
   {
     title: 'Historique de l’attaque',
     text:
-      'La détection a eu lieu au début du mois de mars 2024, après une exfiltration massive qui s’est déroulée sur plusieurs semaines. Des accès frauduleux avaient déjà été identifiés dès février 2024.',
+      'La détection a eu lieu au début du mois de mars 2024, après une exfiltration massive qui s’est déroulée sur plusieurs semaines. Des accès frauduleux avaient déjà été identifiés dès février 2024, ce qui montre que l’attaque s’est déroulée en plusieurs phases avant son signalement.',
     source: 'France Travail',
   },
   {
     title: 'Impact humain et réglementaire',
     text:
-      'L’attaque concerne potentiellement les demandeurs d’emploi actuels et des 20 dernières années, ainsi que les personnes disposant d’un espace candidat. Le respect du RGPD impose d’alerter la CNIL et les victimes dans des délais stricts.',
+      'L’attaque concerne potentiellement les demandeurs d’emploi actuels et des 20 dernières années, ainsi que les personnes disposant d’un espace candidat. Conformément au RGPD, la notification à la CNIL doit intervenir sous 72 heures après la prise de connaissance de la fuite (Article 33), et les victimes doivent être informées dans les meilleurs délais (Article 34).',
     source: 'CNIL / Légifrance',
   },
 ]

@@ -133,6 +133,34 @@
    letter-spacing: 0.02em;
 }
 
+.chaine-attaque {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 0.75rem;
+   background: rgba(255, 255, 255, 0.5);
+   border: 1px solid rgba(72, 106, 138, 0.12);
+   border-radius: 1rem;
+   padding: 1rem;
+   margin-top: 0.75rem;
+}
+
+.chaine-etape {
+   background: rgba(126, 173, 255, 0.12);
+   border: 1px solid rgba(126, 173, 255, 0.2);
+   border-radius: 999px;
+   padding: 0.55rem 0.9rem;
+   font-size: 0.82rem;
+   font-weight: 600;
+   color: #102232;
+}
+
+.fleche-attaque {
+   color: #4d7fb9;
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
 .panneau-liste {
    background: #edf5ff;
    border: 1px solid rgba(70, 110, 145, 0.12);

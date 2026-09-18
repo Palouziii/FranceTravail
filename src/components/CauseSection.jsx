@@ -3,7 +3,7 @@ const faille = [
     icon: '🎣',
     title: 'Phishing classique',
     text:
-      'Le phishing classique consiste à envoyer massivement des courriels d’hameçonnage aux destinataires afin d’obtenir des identifiants ou d’inciter à divulguer des informations sensibles.',
+      'Le phishing classique consiste à envoyer massivement des courriels d’hameçonnage afin d’obtenir des identifiants ou d’inciter à divulguer des informations sensibles.',
     source: 'France Travail',
   },
   {
@@ -17,7 +17,7 @@ const faille = [
     icon: '📞',
     title: 'Vishing',
     text:
-      'Cette manière d’hameçonnage a visé les conseillers via un appel téléphonique et a usurpé leur identité pour pénétrer le réseau sans passer par une attaque technique classique comme une attaque directe d’un serveur ou d’un équipement liée à Internet.',
+      'Cette méthode d’hameçonnage a visé des conseillers via un appel téléphonique qui a permis de voler leurs identifiants et d’usurper leur identité. Ce point est essentiel : les attaquants n’ont pas obtenu un accès limité à une base locale. Ils ont utilisé ces identifiants pour accéder à la base de données centrale de France Travail, à une échelle bien plus large que celle d’un simple service ou d’un département.',
     source: 'France Travail',
   },
 ]
@@ -63,7 +63,6 @@ function CauseSection() {
                 <h4 className="h5 fw-bold text-dark mb-3">{item.title}</h4>
                 <p className="mb-0 text-secondary">{item.text}</p>
                 <small className="source-label d-block mt-3">Source : {item.source}</small>
-                <small className="source-label d-block mt-3">Source : {item.source}</small>
               </div>
             </article>
           </div>
@@ -71,7 +70,18 @@ function CauseSection() {
       </div>
 
       <div className="boit-sous-section">
-        <h4 className="h5 fw-bold text-dark mb-3">Vulnérabilités du système</h4>
+        <h4 className="h5 fw-bold text-dark mb-3">Chaîne d’attaque</h4>
+        <div className="chaine-attaque" aria-label="Chaîne d’attaque">
+          <span className="chaine-etape">Phishing Conseiller Cap Emploi</span>
+          <span className="fleche-attaque">→</span>
+          <span className="chaine-etape">Vol d’identifiants</span>
+          <span className="fleche-attaque">→</span>
+          <span className="chaine-etape">Accès à la Base de données</span>
+          <span className="fleche-attaque">→</span>
+          <span className="chaine-etape">Exfiltration massive des données</span>
+        </div>
+
+        <h4 className="h5 fw-bold text-dark mb-3 mt-4">Vulnérabilités du système</h4>
         <div className="row g-4">
           {vuln.map((item) => (
             <div className="col-lg-4" key={item.title}>
@@ -80,6 +90,7 @@ function CauseSection() {
                   <div className="icone-carte">{item.icon}</div>
                   <h4 className="h5 fw-bold text-dark mb-3">{item.title}</h4>
                   <p className="mb-0 text-secondary">{item.text}</p>
+                  <small className="source-label d-block mt-3">Source : {item.source}</small>
                 </div>
               </article>
             </div>

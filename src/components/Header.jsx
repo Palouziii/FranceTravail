@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 function Header({ navItems, activeSection, setActiveSection }) {
   return (
     <header className="entete">
@@ -5,7 +7,6 @@ function Header({ navItems, activeSection, setActiveSection }) {
         <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3">
           <div className="container-fluid px-0">
             <div className="logo-marque">
-              <span className="logo-texte">FT</span>
               <span>FranceTravail</span>
             </div>
 
@@ -32,9 +33,10 @@ function Header({ navItems, activeSection, setActiveSection }) {
                 Cyberattaque et fuite de données sensibles chez France Travail
               </h1>
               <p className="lead text-white-50 mb-4">
-                Une exfiltration massive de données a touché des millions de personnes. Le cas
-                de France Travail révèle à la fois des faiblesses techniques, des erreurs de
-                gouvernance et une dépendance forte à la vigilance humaine face à l’ingénierie sociale.
+                Une exfiltration massive de données a touché des millions de personnes. Ce cas met
+                en lumière des vulnérabilités techniques, des erreurs de gouvernance et un risque
+                majeur lié à la manipulation humaine. Il démontre qu’une simple compromission
+                d’identifiants peut conduire à une fuite de portée nationale.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <button
