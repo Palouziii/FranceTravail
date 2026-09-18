@@ -1,0 +1,164 @@
+.conteneur-principal {
+   background: linear-gradient(#021a32);
+   color: #102232;
+   min-height: 100vh;
+}
+
+.conteneur-section {
+   width: 100%;
+   max-width: none;
+   margin: 0 auto;
+}
+
+.entete {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 2rem 1rem 3rem;
+   color: #f4f9ff;
+}
+
+.logo-marque {
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+   font-size: 1.2rem;
+   font-weight: 700;
+}
+
+.logo-texte {
+   width: 42px;
+   height: 42px;
+   border-radius: 12px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(135deg, #7de3ff, #4a93ff);
+   color: #061c2e;
+   font-size: 0.9rem;
+   font-weight: 800;
+}
+
+.nav-onglet {
+   border-radius: 999px;
+   font-weight: 600;
+   padding: 0.45rem 0.9rem;
+   transition: all 0.2s ease;
+}
+
+.nav-onglet:hover {
+   transform: translateY(-1px);
+}
+
+.surtitre {
+   display: inline-block;
+   margin-bottom: 0.75rem;
+   color: #7ac9ff;
+   font-size: 0.72rem;
+   font-weight: 700;
+   letter-spacing: 0.12em;
+   text-transform: uppercase;
+}
+
+.carte-impact {
+   background: rgba(15, 30, 44, 0.78);
+   border: 1px solid rgba(148, 206, 255, 0.2);
+   border-radius: 1.5rem;
+   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+   padding: 1.75rem;
+}
+
+.libelle-impact {
+   color: #a6d5ff;
+   font-size: 0.75rem;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+   margin-bottom: 0.8rem;
+}
+
+.grille-mini {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(120px, 1fr));
+   gap: 0.8rem;
+   margin-top: 1.2rem;
+}
+
+.grille-mini div {
+   background: rgba(152, 196, 255, 0.08);
+   border: 1px solid rgba(152, 196, 255, 0.12);
+   border-radius: 0.9rem;
+   padding: 0.7rem 0.8rem;
+}
+
+.section-contenu {
+   background: rgba(255, 255, 255, 0.88);
+   border: 0;
+   border-radius: 1.5rem;
+   box-shadow: none;
+   margin: 2rem auto 0;
+   padding: 2rem 1.5rem;
+   max-width: 1280px;
+   width: calc(100% - 2rem);
+}
+
+.card,
+.card-body,
+.card-body * {
+   border: 0 !important;
+   box-shadow: none !important;
+}
+
+.shadow-sm {
+   box-shadow: none !important;
+}
+
+.fond-alternatif {
+   background: #f2f7fd;
+}
+
+.icone-carte {
+   width: 48px;
+   height: 48px;
+   border-radius: 14px;
+   background: linear-gradient(135deg, #def8ff, #dfeafe);
+   display: grid;
+   place-items: center;
+   font-size: 1.4rem;
+   margin-bottom: 0.85rem;
+}
+
+.source-label {
+   font-size: 0.72rem;
+   font-weight: 600;
+   color: #5c7389;
+   letter-spacing: 0.02em;
+}
+
+.panneau-liste {
+   background: #edf5ff;
+   border: 1px solid rgba(70, 110, 145, 0.12);
+   border-radius: 1.1rem;
+   padding: 1.2rem;
+}
+
+.panneau-avertissement {
+   background: #fff4eb;
+   border-color: rgba(200, 126, 52, 0.16);
+}
+
+.boit-sous-section {
+   margin-top: 1.5rem;
+   background: #edf5ff;
+   border: 1px solid rgba(70, 110, 145, 0.12);
+   border-radius: 1.1rem;
+   padding: 1.25rem;
+}
+
+@media (max-width: 991.98px) {
+   .entete {
+      padding-top: 1.25rem;
+   }
+
+   .nav-onglet {
+      font-size: 0.75rem;
+   }
+}
