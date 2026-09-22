@@ -13,8 +13,11 @@ const enjeux = [
   },
   {
     title: 'Impact humain et réglementaire',
-    text:
-      'L’attaque concerne potentiellement les demandeurs d’emploi actuels et des 20 dernières années, ainsi que les personnes disposant d’un espace candidat. Conformément au RGPD, la notification à la CNIL doit intervenir sous 72 heures après la prise de connaissance de la fuite (Article 33), et les victimes doivent être informées dans les meilleurs délais (Article 34).',
+    text: (
+      <>
+        L’attaque concerne potentiellement les demandeurs d’emploi actuels et des 20 dernières années, ainsi que les personnes disposant d’un espace candidat. Conformément au RGPD, la notification à la CNIL doit intervenir sous 72 heures après la prise de connaissance de la fuite (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article33" target="_blank" rel="noreferrer">Article 33</a>), et les victimes doivent être informées dans les meilleurs délais (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article34" target="_blank" rel="noreferrer">Article 34</a>).
+      </>
+    ),
     source: 'CNIL / Légifrance',
   },
 ]

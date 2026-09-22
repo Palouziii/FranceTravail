@@ -33,10 +33,10 @@ function Header({ navItems, activeSection, setActiveSection }) {
                 Cyberattaque et fuite de données sensibles chez France Travail
               </h1>
               <p className="lead text-white-50 mb-4">
-                Une exfiltration massive de données a touché des millions de personnes. Ce cas met
-                en lumière des vulnérabilités techniques, des erreurs de gouvernance et un risque
-                majeur lié à la manipulation humaine. Il démontre qu’une simple compromission
-                d’identifiants peut conduire à une fuite de portée nationale.
+                Une exfiltration massive de données a touché des millions de personnes. Ce cas met en avant
+                des des failles, des erreurs de gouvernance et un risque
+                majeur lié à l’ingénierie social. Il est question d’une simple compromission
+                d’identifiants qui c’est étendu à l’echelle natio nal.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <button

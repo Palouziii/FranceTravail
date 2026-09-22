@@ -45,6 +45,19 @@ function MenacesSection() {
         ))}
       </div>
 
+      <div className="chronologie-bloc mt-4">
+        <h4 className="h5 fw-bold text-dark mb-3">Sanctions et dysfonctionnements pointés par la CNIL</h4>
+        <p className="mb-2 text-secondary">
+          La <a className="lien-article" href="https://www.cnil.fr/fr/violation-de-donnees-sanction-5millions-france-travail" target="_blank" rel="noreferrer">CNIL a prononcé une amende historique de 5 millions d’euros</a> à l’encontre de France Travail après avoir constaté plusieurs manquements majeurs de sécurité, notamment :
+        </p>
+        <ul className="liste-sans-puce text-secondary">
+          <li><strong>Défaut de double authentification (MFA) :</strong> les partenaires externes pouvaient se connecter à la base nationale avec un simple identifiant et mot de passe, sans validation supplémentaire.</li>
+          <li><strong>Absence de filtrage des requêtes :</strong> un conseiller pouvait interroger la base au-delà de ses besoins géographiques ou professionnels, sans limitation adaptée.</li>
+          <li><strong>Manque de détection :</strong> l’absence de mécanismes d’alerte automatisés face à des téléchargements massifs et inhabituels a permis à l’attaque d’échapper aux contrôles pendant près d’un mois.</li>
+        </ul>
+        <small className="source-label d-block mt-2">Source : CNIL / ANSSI / France Travail</small>
+      </div>
+
     </section>
   )
 }
