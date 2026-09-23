@@ -3,43 +3,43 @@ const remediations = [
     icon: '🛡️',
     title: 'MFA obligatoire pour tous les accès',
     text:
-      'Le déploiement systématique d’une authentification multi-facteurs est essentiel, en privilégiant des méthodes solides comme les clés TOTP ou FIDO2, tant pour les agents internes que pour les tiers partenaires. Cela réduit fortement les risques d’usurpation d’identité.',
-    source: 'CERT-FR / ANSSI',
+      'Le déploiement systématique d’une authentification multi-facteurs est essentiel, en privilégiant des méthodes solides comme les clés TOTP par exemple, tant pour les agents internes que pour les partenaires. Cela réduit fortement les risques d’usurpation d’identité.',
+    source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🚧',
     title: 'Segmentation et moindre privilège',
     text:
-      'Il faut compartimenter les réseaux partenaires et les bases de données centrales, en appliquant le principe du moindre privilège et en évitant toute liaison directe sans filtrage strict par API. Cette mesure limite l’impact d’un compte compromis.',
-    source: 'CERT-FR / ANSSI',
+      'Il faut compartimenter les réseaux partenaires et les bases de données centrales, en appliquant le principe du moindre privilège qui consiste à n’accorder à un utilisateur que les droits et les accès strictement nécessaires à sa tâche. Cette mesure limite l’impact d’un compte compromis.',
+    source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '📡',
     title: 'Surveillance comportementale et blocage du scraping',
     text:
-      'L’implémentation d’outils de surveillance comportementale permet de détecter et bloquer automatiquement les requêtes volumineuses ou anormales, ce qui limite les exfiltrations massives.',
-    source: 'ANSSI',
+      'L’implémentation d’outils de surveillance crucial permettant de détecter et bloquer automatiquement les requêtes volumineuses ou anormales, ce qui limite le scraping.',
+    source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🎓',
     title: 'Sensibilisation et formation régulière',
     text:
-      'Les agents et partenaires doivent être formés aux pièges du spear-phishing, de l’ingénierie sociale et aux pratiques sécuritaires essentielles pour identifier une tentative d’usurpation. La directive NIS 2 renforce cette logique de vigilance et de responsabilité de sécurité.',
-    source: 'CERT-FR / ANSSI',
+      'Les agents et partenaires doivent être formés aux pièges du spear-phishing, de l’ingénierie sociale et aux pratiques de sécurité pour identifier une tentative d’usurpation.',
+    source: 'Bonne pratique recommandée par l’ANSSI',
   },
 ]
 
 const organization = [
   {
-    title: 'Politique de sécurité des tiers',
+    title: 'Politique de sécurité pour les partenaires',
     text:
-      'Tout organisme externe ayant accès aux serveurs doit respecter des règles de sécurité strictes et vérifiables, avec une supervision solide des accès et des droits. Cela répond à l’objectif de sécurité de la chaîne d’approvisionnement imposé par NIS 2.',
+      'Tout organisme externe ayant accès aux serveurs doit respecter des règles de sécurité strictes, avec une supervision solide des accès.',
     source: 'France Travail',
   },
   {
-    title: 'Accompagnement des usagers',
+    title: 'Accompagnement des utilisateurs',
     text:
-      'Les victimes doivent être informées de manière transparente, avec des campagnes d’information précisant qu’il ne faut jamais communiquer de mots de passe, de RIB ou de code par téléphone ou par email. La notification à la CNIL doit être faite sous 72 heures, puis les personnes concernées doivent être averties dans les meilleurs délais.',
+      'Les victimes doivent être informées de manière transparente, avec des campagnes d’information précisant qu’il ne faut jamais communiquer de mots de passe, de RIB ou de code par téléphone ou par email. La notification à la CNIL doit être faite sous 72 heures, puis les personnes concernées doivent être averties au plus tôt.',
     source: 'CNIL',
   },
 ]
@@ -48,8 +48,8 @@ function SolutionsSection() {
   return (
     <section className="section-contenu">
       <div className="mb-4">
-        <span className="surtitre">V. Solutions et protections</span>
-        <h3 className="h2 fw-bold text-dark">Mesures techniques, organisationnelles et citoyennes</h3>
+        <span className="surtitre">V. Protections</span>
+        <h3 className="h2 fw-bold text-dark">Quelles mesures pour réduire le risque ?</h3>
       </div>
 
       <div className="row g-4">

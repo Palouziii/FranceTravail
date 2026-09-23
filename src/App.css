@@ -1,6 +1,6 @@
 .conteneur-principal {
-   background: linear-gradient(#021a32);
-   color: #102232;
+   background: linear-gradient(135deg, #4a1025 0%, #741634 58%, #8f1d3f 100%);
+   color: var(--ub-encre);
    min-height: 100vh;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .entete {
-   max-width: 1200px;
+   max-width: 1500px;
    margin: 0 auto;
    padding: 2rem 1rem 3rem;
    color: #f4f9ff;
@@ -21,28 +21,65 @@
    display: flex;
    align-items: center;
    gap: 0.75rem;
-   font-size: 1.2rem;
-   font-weight: 700;
+   color: #fff;
 }
 
 .logo-texte {
    width: 42px;
    height: 42px;
-   border-radius: 12px;
+   border-radius: 4px;
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   background: linear-gradient(135deg, #7de3ff, #4a93ff);
-   color: #061c2e;
-   font-size: 0.9rem;
-   font-weight: 800;
+   background: linear-gradient(135deg, var(--ub-or), #f0ca70);
+   color: var(--ub-bordeaux-fonce);
+   font-family: Georgia, serif;
+   font-size: 1rem;
+   font-weight: 700;
+   letter-spacing: 0;
+}
+
+.logo-libelle {
+   display: grid;
+   line-height: 1.1;
+}
+
+.logo-libelle strong {
+   font-size: 1.05rem;
+   letter-spacing: 0.04em;
+}
+
+.logo-libelle small {
+   margin-top: 0.25rem;
+   color: rgba(255, 255, 255, 0.72);
+   font-size: 0.68rem;
+   font-weight: 400;
+}
+
+.logo-officiel {
+   width: 250px;
+   height: auto;
+   flex: 0 0 auto;
+   margin-right: 1.25rem;
 }
 
 .nav-onglet {
    border-radius: 999px;
+   flex: 0 0 auto;
    font-weight: 600;
-   padding: 0.45rem 0.9rem;
+   padding: 0.4rem 0.65rem;
+   white-space: nowrap;
    transition: all 0.2s ease;
+}
+
+.menu-navigation {
+   max-width: 100%;
+   overflow-x: auto;
+   scrollbar-width: none;
+}
+
+.menu-navigation::-webkit-scrollbar {
+   display: none;
 }
 
 .nav-onglet:hover {
@@ -52,7 +89,7 @@
 .surtitre {
    display: inline-block;
    margin-bottom: 0.75rem;
-   color: #7ac9ff;
+   color: #f0ca70;
    font-size: 0.72rem;
    font-weight: 700;
    letter-spacing: 0.12em;
@@ -60,15 +97,15 @@
 }
 
 .carte-impact {
-   background: rgba(15, 30, 44, 0.78);
-   border: 1px solid rgba(148, 206, 255, 0.2);
+   background: rgba(58, 12, 29, 0.72);
+   border: 1px solid rgba(240, 202, 112, 0.32);
    border-radius: 1.5rem;
    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
    padding: 1.75rem;
 }
 
 .libelle-impact {
-   color: #a6d5ff;
+   color: #f0ca70;
    font-size: 0.75rem;
    letter-spacing: 0.1em;
    text-transform: uppercase;
@@ -83,14 +120,14 @@
 }
 
 .grille-mini div {
-   background: rgba(152, 196, 255, 0.08);
-   border: 1px solid rgba(152, 196, 255, 0.12);
+   background: rgba(255, 255, 255, 0.08);
+   border: 1px solid rgba(255, 255, 255, 0.14);
    border-radius: 0.9rem;
    padding: 0.7rem 0.8rem;
 }
 
 .section-contenu {
-   background: rgba(255, 255, 255, 0.88);
+   background: rgba(251, 248, 243, 0.94);
    border: 0;
    border-radius: 1.5rem;
    box-shadow: none;
@@ -112,14 +149,14 @@
 }
 
 .fond-alternatif {
-   background: #f2f7fd;
+   background: var(--ub-rose-pale);
 }
 
 .icone-carte {
    width: 48px;
    height: 48px;
    border-radius: 14px;
-   background: linear-gradient(135deg, #def8ff, #dfeafe);
+   background: linear-gradient(135deg, #f8dfb0, #f1cfd7);
    display: grid;
    place-items: center;
    font-size: 1.4rem;
@@ -129,12 +166,12 @@
 .source-label {
    font-size: 0.72rem;
    font-weight: 600;
-   color: #5c7389;
+   color: #745965;
    letter-spacing: 0.02em;
 }
 
 .lien-article {
-   color: #0d6efd;
+   color: var(--ub-bordeaux);
    text-decoration: underline;
    text-decoration-thickness: 2px;
    text-underline-offset: 0.15em;
@@ -143,10 +180,10 @@
 
 .lien-article:hover,
 .lien-article:focus-visible {
-   color: #0a4ea3;
-   background-color: rgba(13, 110, 253, 0.08);
-   text-decoration-color: #0a4ea3;
-   box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.12);
+   color: var(--ub-bordeaux-fonce);
+   background-color: rgba(143, 29, 63, 0.08);
+   text-decoration-color: var(--ub-bordeaux-fonce);
+   box-shadow: 0 0 0 2px rgba(143, 29, 63, 0.12);
    border-radius: 0.2rem;
 }
 
@@ -156,31 +193,31 @@
    align-items: center;
    gap: 0.75rem;
    background: rgba(255, 255, 255, 0.5);
-   border: 1px solid rgba(72, 106, 138, 0.12);
+   border: 1px solid rgba(116, 89, 101, 0.18);
    border-radius: 1rem;
    padding: 1rem;
    margin-top: 0.75rem;
 }
 
 .chaine-etape {
-   background: rgba(126, 173, 255, 0.12);
-   border: 1px solid rgba(126, 173, 255, 0.2);
+   background: rgba(217, 164, 65, 0.14);
+   border: 1px solid rgba(217, 164, 65, 0.34);
    border-radius: 999px;
    padding: 0.55rem 0.9rem;
    font-size: 0.82rem;
    font-weight: 600;
-   color: #102232;
+   color: var(--ub-encre);
 }
 
 .fleche-attaque {
-   color: #4d7fb9;
+   color: var(--ub-bordeaux-clair);
    font-size: 1.2rem;
    font-weight: 700;
 }
 
 .panneau-liste {
-   background: #edf5ff;
-   border: 1px solid rgba(70, 110, 145, 0.12);
+   background: #f8edef;
+   border: 1px solid rgba(143, 29, 63, 0.14);
    border-radius: 1.1rem;
    padding: 1.2rem;
 }
@@ -192,8 +229,8 @@
 
 .boit-sous-section {
    margin-top: 1.5rem;
-   background: #edf5ff;
-   border: 1px solid rgba(70, 110, 145, 0.12);
+   background: #f8edef;
+   border: 1px solid rgba(143, 29, 63, 0.14);
    border-radius: 1.1rem;
    padding: 1.25rem;
 }
@@ -201,7 +238,7 @@
 .chronologie-bloc {
    margin-top: 1.5rem;
    background: rgba(255, 255, 255, 0.45);
-   border: 1px solid rgba(70, 110, 145, 0.1);
+   border: 1px solid rgba(116, 89, 101, 0.16);
    border-radius: 1rem;
    padding: 1.1rem 1.1rem 0.5rem;
 }
@@ -214,19 +251,19 @@
 }
 
 .chronologie-liste li {
-   color: #1f2e3d;
+   color: #3a2730;
    line-height: 1.6;
 }
 
 .chronologie-liste p {
    margin: 0.35rem 0 0;
-   color: #3d5368;
+   color: #684e59;
 }
 
 .date-chronologie {
    display: inline-block;
    font-weight: 700;
-   color: #0b4e9d;
+   color: var(--ub-bordeaux);
    margin-bottom: 0.2rem;
 }
 
@@ -244,5 +281,10 @@
 
    .nav-onglet {
       font-size: 0.75rem;
+   }
+
+   .logo-officiel {
+      width: 190px;
+      margin-left: 0.75rem;
    }
 }

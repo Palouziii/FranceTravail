@@ -25,7 +25,7 @@ const diffusion = [
   {
     title: 'Recoupement avec d’autres fuites',
     text:
-      'Les données ont ensuite été recoupées avec d’autres fuites antérieures afin d’agrandir le phénomène de l’attaque et d’augmenter leur valeur sur le marché noir.',
+      'Les données ont ensuite été recoupées avec d’autres fuites antérieures afin d’agrandir le phénomène de l’attaque et d’augmenter leur valeur.',
     source: 'Zataz',
   },
 ]
@@ -34,8 +34,8 @@ function DonneesSection() {
   return (
     <section className="section-contenu">
       <div className="mb-4">
-        <span className="surtitre">III. Données compromises</span>
-        <h3 className="h2 fw-bold text-dark">Nature des données, diffusion et menace</h3>
+        <span className="surtitre">III. Données exposées</span>
+        <h3 className="h2 fw-bold text-dark">Quelles données ont été exposées et diffusées ?</h3>
       </div>
 
       <div className="row g-4">

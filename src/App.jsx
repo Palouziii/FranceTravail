@@ -10,11 +10,11 @@ import SolutionsSection from './components/SolutionsSection'
 
 const navItems = [
   { id: 'accueil', label: 'Accueil' },
-  { id: 'contexte', label: 'I. Contexte' },
-  { id: 'cause', label: 'II. Causes' },
-  { id: 'donnees', label: 'III. Données' },
-  { id: 'menaces', label: 'IV. Menaces' },
-  { id: 'solutions', label: 'V. Solutions' },
+  { id: 'contexte', label: 'I. Contexte & chronologie' },
+  { id: 'cause', label: 'II. Causes & vulnérabilités' },
+  { id: 'donnees', label: 'III. Données exposées' },
+  { id: 'menaces', label: 'IV. Menaces & conséquences' },
+  { id: 'solutions', label: 'V. Protections' },
 ]
 
 function App() {

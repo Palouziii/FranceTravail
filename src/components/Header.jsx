@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import logoIut from '../LOGO_iut_dan_quadri-1.png'
 
 function Header({ navItems, activeSection, setActiveSection }) {
   return (
@@ -6,11 +7,13 @@ function Header({ navItems, activeSection, setActiveSection }) {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-dark px-0 py-3">
           <div className="container-fluid px-0">
-            <div className="logo-marque">
-              <span>FranceTravail</span>
-            </div>
+            <img
+              className="logo-officiel"
+              src={logoIut}
+              alt="IUT de Dijon-Auxerre-Nevers, Université de Bourgogne Europe"
+            />
 
-            <div className="d-flex flex-wrap gap-2 ms-auto align-items-center">
+            <div className="menu-navigation d-flex flex-nowrap gap-1 ms-auto align-items-center">
               {navItems.map((item) => (
                 <button
                   key={item.id}
@@ -28,15 +31,15 @@ function Header({ navItems, activeSection, setActiveSection }) {
         {activeSection === 'accueil' && (
           <div className="row align-items-center g-4 py-4">
             <div className="col-lg-8">
-              <span className="surtitre">Analyse de sécurité</span>
-              <h1 className="display-5 fw-bold lh-sm text-white mb-3">
-                Cyberattaque et fuite de données sensibles chez France Travail
+              <span className="surtitre">Analyse Cyberattaque France Travail</span>
+              <h1 className="display-5 fw-bold lh-sm text-white mb-2">
+                Cyberattaque et fuite de données chez France Travail : LE BILAN 
               </h1>
               <p className="lead text-white-50 mb-4">
                 Une exfiltration massive de données a touché des millions de personnes. Ce cas met en avant
-                des des failles, des erreurs de gouvernance et un risque
-                majeur lié à l’ingénierie social. Il est question d’une simple compromission
-                d’identifiants qui c’est étendu à l’echelle natio nal.
+                des failles, des erreurs de gouvernance et un risque
+                lié à l’ingénierie sociale. Il s’agit d’un vol
+                d’identifiants qui s’est étendue à l’échelle nationale.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <button
@@ -80,6 +83,17 @@ function Header({ navItems, activeSection, setActiveSection }) {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  navItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  activeSection: PropTypes.string.isRequired,
+  setActiveSection: PropTypes.func.isRequired,
 }
 
 export default Header
