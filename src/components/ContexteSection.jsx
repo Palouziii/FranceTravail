@@ -2,20 +2,20 @@ const enjeux = [
   {
     title: 'Rôle central de France Travail',
     text:
-      'France Travail gère des données sensibles de millions de citoyens français. Ce sont des informations directement liées à la vie des usagers. Le point central est que des identifiants de conseiller Cap Emploi ont été compromis, puis utilisés pour accéder au système de manière beaucoup plus large que la simple base d’une région ou d’un département. L’erreur n’était pas limitée à un périmètre local : elle a permis un accès à l’échelle nationale.',
+      'France Travail manipule des données très sensibles de millions de citoyens. Dans ce cas, le point important n’est pas seulement la fuite elle-même, mais le fait que des comptes de conseillers Cap Emploi ont été compromis puis utilisés pour accéder à des informations bien au-delà d’un simple périmètre local.',
     source: 'France Travail',
   },
   {
     title: 'Historique de l’attaque',
     text:
-      'La détection a eu lieu au début du mois de mars 2024, après une exfiltration massive (web scraping) qui s’est déroulée sur plusieurs semaines. Des accès frauduleux avaient déjà été identifiés dès février 2024, ce qui montre que l’attaque s’est déroulée en plusieurs phases avant son signalement.',
+      'La détection a eu lieu au début du mois de mars 2024, après une exfiltration massive qui a duré plusieurs semaines. Les accès frauduleux semblent avoir commencé dès février, ce qui montre que l’attaque a été préparée et menée en plusieurs phases avant d’être repérée.',
     source: 'France Travail',
   },
   {
     title: 'Impact humain et réglementaire',
     text: (
       <>
-        L’attaque concerne potentiellement les demandeurs d’emploi actuels et des 20 dernières années, ainsi que les personnes disposant d’un espace candidat. Conformément au RGPD, la notification à la CNIL doit intervenir sous 72 heures après la prise de connaissance de la fuite (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article33" target="_blank" rel="noreferrer">Article 33</a>), et les victimes doivent être informées dans les meilleurs délais (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article34" target="_blank" rel="noreferrer">Article 34</a>).
+        L’attaque concerne potentiellement les demandeurs d’emploi actuels, les personnes ayant utilisé le service au cours des 20 dernières années et celles qui disposent d’un espace candidat. En droit européen, la notification à la CNIL doit intervenir sous 72 heures après la prise de connaissance de la fuite (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article33" target="_blank" rel="noreferrer">Article 33</a>), et les victimes doivent être informées dans les meilleurs délais (<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article34" target="_blank" rel="noreferrer">Article 34</a>).
       </>
     ),
     source: 'CNIL / Légifrance',
@@ -50,8 +50,8 @@ function ContexteSection() {
           <li>
             <span className="date-chronologie">Janvier – début février 2024</span>
             <p>
-              Les attaquants ciblent des conseillers du réseau Cap emploi par ingénierie sociale téléphonique.
-              L’objectif est de voler des identifiants et mots de passe au sein d’un environnement professionnel jugé ’’crédible et peu surveillé’’.
+              Les attaquants ciblent des conseillers du réseau Cap emploi par une tentative d’ingénierie sociale téléphonique.
+              L’idée est de récupérer des identifiants et des mots de passe dans un environnement professionnel qui paraît crédible et peu surveillé.
             </p>
           </li>
           <li>
@@ -63,8 +63,8 @@ function ContexteSection() {
           <li>
             <span className="date-chronologie">6 février – 5 mars 2024</span>
             <p>
-              L’extraction se déroule sur plusieurs semaines. Les pirates se font passer pour les conseillers   et lancent des requêtes massives afin d’extraire des blocs entiers de données civiles, en profitant de droits trop larges par rapport au besoin réel.
-              Le point critique est que le système interne ne déclenche aucune alerte face à ce volume anormal de consultations et de téléchargements.
+              L’extraction se déroule sur plusieurs semaines. Les pirates se font passer pour des conseillers et lancent des requêtes massives pour récupérer des blocs entiers de données civiles, en profitant de droits trop larges par rapport à leur besoin réel.
+              Le point critique est qu’aucune alerte ne semble être déclenchée face à ce volume anormal de consultations et de téléchargements.
             </p>
           </li>
           <li>
@@ -92,12 +92,12 @@ function ContexteSection() {
       <div className="chronologie-bloc mt-4">
         <h4 className="h5 fw-bold text-dark mb-3">Suite réglementaire de l’incident</h4>
         <p className="mb-2 text-secondary">
-          Le 22 janvier 2026, la <a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">CNIL a prononcé une amende de 5 millions d’euros</a> à l’encontre de France Travail, en se reposant sur l’<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">article 32</a> du RGPD, après avoir constaté plusieurs problème de sécurité, notamment :
+          Le 22 janvier 2026, la <a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">CNIL a prononcé une amende de 5 millions d’euros</a> à l’encontre de France Travail, en se reposant sur l’<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">article 32</a> du RGPD, après avoir constaté plusieurs problèmes de sécurité, notamment :
         </p>
         <ul className="liste-sans-puce text-secondary">
           <li><strong>Défaut de double authentification (MFA) :</strong> les partenaires externes pouvaient se connecter à la base nationale avec un simple identifiant et mot de passe, sans validation supplémentaire.</li>
-          <li><strong>Absence de filtrage des requêtes :</strong> un conseiller pouvait interroger la base au-delà de ses besoins géographiques ou professionnels, sans limitation strict.</li>
-          <li><strong>Manque de détection :</strong> l’absence de mécanismes d’alerte automatisés face à des téléchargements massifs et non habituel a permis à l’attaque d’échapper aux contrôles pendant près d’un mois.</li>
+          <li><strong>Absence de filtrage des requêtes :</strong> un conseiller pouvait interroger la base au-delà de ses besoins géographiques ou professionnels, sans limitation stricte.</li>
+          <li><strong>Manque de détection :</strong> l’absence de mécanismes d’alerte automatisés face à des téléchargements massifs et inhabituels a permis à l’attaque d’échapper aux contrôles pendant près d’un mois.</li>
         </ul>
         <small className="source-label d-block mt-2">Source : CNIL / France Travail</small>
       </div>

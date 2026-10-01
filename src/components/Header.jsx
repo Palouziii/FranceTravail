@@ -33,13 +33,12 @@ function Header({ navItems, activeSection, setActiveSection }) {
             <div className="col-lg-8">
               <span className="surtitre">Analyse Cyberattaque France Travail</span>
               <h1 className="display-5 fw-bold lh-sm text-white mb-2">
-                Cyberattaque et fuite de données chez France Travail : LE BILAN 
+                Cyberattaque et fuite de données chez France Travail : le bilan
               </h1>
               <p className="lead text-white-50 mb-4">
-                Une exfiltration massive de données a touché des millions de personnes. Ce cas met en avant
-                des failles, des erreurs de gouvernance et un risque
-                lié à l’ingénierie sociale. Il s’agit d’un vol
-                d’identifiants qui s’est étendue à l’échelle nationale.
+                Une exfiltration massive de données a touché des millions de personnes. Le cas met en avant
+                plusieurs failles de sécurité, des erreurs de gouvernance et un risque lié à l’ingénierie sociale.
+                L’attaque a permis l’accès à des comptes légitimes puis l’extraction d’une grande quantité de données.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <button

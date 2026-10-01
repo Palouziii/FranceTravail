@@ -3,21 +3,21 @@ const risks = [
     icon: '📞',
     title: 'Fraude téléphonique et usurpation',
     text:
-      'Les données exposées peuvent être réutilisées pour appeler les victimes en se faisant passer pour France Travail, une banque ou une administration, afin de leur soutirer de nouvelles informations.',
+      'Les informations exposées peuvent être utilisées pour appeler les victimes en se faisant passer pour France Travail, une banque ou une administration, afin d’obtenir de nouvelles informations.',
     source: 'Risque associé à la fuite — CNIL',
   },
   {
     icon: '📧',
     title: 'Autres risques : phishing et smishing',
     text:
-      'Après une fuite de données, des emails ou SMS frauduleux peuvent sembler authentiques. Ce risque est souvent général.',
+      'Après une fuite de données, les messages frauduleux peuvent sembler légitimes. C’est un risque classique dans ce type d’incident, surtout si les données sont exploitées rapidement.',
     source: 'Risque général — bonnes pratiques ANSSI',
   },
   {
     icon: '🧑‍💼',
     title: 'Usurpation d’identité administrative',
     text:
-      'Des tentatives d’ouverture de dossiers frauduleux sont possibles, ce qui détourne les procédures administratives et peut donc porter atteinte aux droits des victimes.',
+      'Des tentatives d’ouverture de dossiers ou d’accès frauduleux restent possibles. Cela peut perturber des procédures administratives et porter atteinte aux droits des victimes.',
     source: 'France Travail',
   },
 ]

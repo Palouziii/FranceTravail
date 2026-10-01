@@ -1,30 +1,30 @@
 const remediations = [
   {
     icon: '🛡️',
-    title: 'MFA obligatoire pour tous les accès',
+    title: 'MFA forte et phishing-resistant',
     text:
-      'Le déploiement systématique d’une authentification multi-facteurs est essentiel, en privilégiant des méthodes solides comme les clés TOTP par exemple, tant pour les agents internes que pour les partenaires. Cela réduit fortement les risques d’usurpation d’identité.',
+      'Le meilleur remède reste une authentification forte, avec des mécanismes résistants au phishing comme FIDO2/WebAuthn. Ce type d’authentification vérifie le bon site ou le bon domaine avant d’accepter la connexion, ce qui rend impossible une simple usurpation de l’identité dans ce type de scénario.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🚧',
-    title: 'Segmentation et moindre privilège',
+    title: 'Moindre privilège et cloisonnement applicatif',
     text:
-      'Il faut compartimenter les réseaux partenaires et les bases de données centrales, en appliquant le principe du moindre privilège qui consiste à n’accorder à un utilisateur que les droits et les accès strictement nécessaires à sa tâche. Cette mesure limite l’impact d’un compte compromis.',
+      'Il faut limiter les droits des comptes à ce qu’ils ont strictement besoin d’utiliser. Là où cela compte vraiment, c’est au niveau des accès applicatifs : un compte compromis ne doit pas avoir accès à des données en dehors de son périmètre fonctionnel.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '📡',
     title: 'Surveillance comportementale et blocage du scraping',
     text:
-      'L’implémentation d’outils de surveillance crucial permettant de détecter et bloquer automatiquement les requêtes volumineuses ou anormales, ce qui limite le scraping.',
+      'Les outils de surveillance doivent détecter les accès anormaux, les requêtes massives et les téléchargements inhabituels. C’est une bonne manière de couper rapidement une exfiltration avant qu’elle ne devienne trop importante.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🎓',
     title: 'Sensibilisation et formation régulière',
     text:
-      'Les agents et partenaires doivent être formés aux pièges du spear-phishing, de l’ingénierie sociale et aux pratiques de sécurité pour identifier une tentative d’usurpation.',
+      'Les agents et partenaires doivent être formés aux tentatives d’ingénierie sociale et à la bonne hygiène numérique. En sécurité, la vigilance humaine compte autant que les outils techniques.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
 ]

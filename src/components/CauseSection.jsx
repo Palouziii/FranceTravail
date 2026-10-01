@@ -3,21 +3,21 @@ const faille = [
     icon: '🔑',
     title: 'Compromission des identifiants',
     text:
-      'Les identifiants de deux conseillers Cap emploi ont été obtenus par ingénierie sociale téléphonique, puis utilisés pour se faire passer pour des agents habilités.',
+      'Selon les éléments connus, les identifiants de conseillers Cap emploi ont été obtenus par une tentative d’ingénierie sociale téléphonique, puis utilisés pour se faire passer pour des agents dont l’accès était légitime.',
     source: 'Zataz / CNIL',
   },
   {
     icon: '🎯',
     title: 'Accès partenaire compromis',
     text:
-      'Les conseillers Cap emploi disposaient d’un accès légitime à une partie de la base de données, surtout au système de recherche usagers. L’attaque a exploité des identifiants compromis, faute de restriction suffisante.',
+      'Les conseillers Cap emploi disposaient d’un accès légitime à une partie de la base de données, notamment au système de recherche d’usagers. L’attaque a profité de ce droit pour aller plus loin que ce qu’un simple accès local aurait permis.',
     source: 'Zataz',
   },
   {
     icon: '📞',
     title: 'Vishing',
     text:
-      'Le vecteur central est un appel téléphonique d’ingénierie sociale visant des conseillers. Les attaquants ont volé leurs identifiants, puis usurpé leur identité pour accéder à la base centrale au-delà de la limite.',
+      'Le point central semble être une tentative d’ingénierie sociale par téléphone visant des conseillers. Une fois les identifiants récupérés, les attaquants ont essayé d’usurper leur identité pour accéder à la base centrale.',
     source: 'Zataz / CNIL',
   },
 ]
@@ -27,21 +27,21 @@ const vuln = [
     icon: '🔐',
     title: 'MFA absent ou insuffisant',
     text:
-      'L’absence de double facteur d’authentification obligatoire sur l’ensemble des accès distants des partenaires externes a facilité la compromission des comptes.',
+      'L’absence d’une authentification forte sur les accès distants des partenaires externes a facilité la compromission des comptes. Un simple identifiant et un mot de passe ne suffisent pas face à une usurpation ciblée.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🧱',
-    title: 'Gestion des droits trop laxiste ',
+    title: 'Gestion des droits trop laxistes',
     text:
-      'Les droits d’accès accordés au réseau partenaire ont été élargis sans contrôle suffisant, exposant indirectement davantage de données sensibles.',
+      'Les droits accordés aux comptes partenaires étaient trop larges par rapport au besoin réel. Cela a permis à un accès légitime de devenir beaucoup plus dangereux qu’il ne devait l’être.',
     source: 'France Travail',
   },
   {
     icon: '🚨',
     title: 'Absence de détection en temps réel',
     text:
-      'Il manquait des alertes sur les requêtes volumineuses anormales générées à partir d’un compte de conseiller unique. Le “scraping” massif n’a pas été détecté à temps.',
+      'Il manquait des alertes capables de repérer des requêtes massives ou anormales sur un compte professionnel. Le “scraping” n’a pas été détecté à temps.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
 ]
