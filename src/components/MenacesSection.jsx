@@ -3,14 +3,14 @@ const risks = [
     icon: '📞',
     title: 'Fraude téléphonique et usurpation',
     text:
-      'Les informations exposées peuvent être utilisées pour appeler les victimes en se faisant passer pour France Travail, une banque ou une administration, afin d’obtenir de nouvelles informations.',
+      'Les informations volées peuvent être utilisées pour appeler les victimes en se faisant passer pour France Travail, une banque ou une administration, afin d’obtenir de nouvelles informations.',
     source: 'Risque associé à la fuite — CNIL',
   },
   {
     icon: '📧',
-    title: 'Autres risques : phishing et smishing',
+    title: 'Phishing et smishing',
     text:
-      'Après une fuite de données, les messages frauduleux peuvent sembler légitimes. C’est un risque classique dans ce type d’incident, surtout si les données sont exploitées rapidement.',
+      'Après une fuite de données, les messages frauduleux peuvent sembler légitimes. C’est un risque classique dans ce type d’incident, surtout si les informations sont exploitées rapidement.',
     source: 'Risque général — bonnes pratiques ANSSI',
   },
   {

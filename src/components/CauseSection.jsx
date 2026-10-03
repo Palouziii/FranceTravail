@@ -3,21 +3,21 @@ const faille = [
     icon: '🔑',
     title: 'Compromission des identifiants',
     text:
-      'Selon les éléments connus, les identifiants de conseillers Cap emploi ont été obtenus par une tentative d’ingénierie sociale téléphonique, puis utilisés pour se faire passer pour des agents dont l’accès était légitime.',
+      'Les identifiants de conseillers Cap emploi ont été obtenus via une tentative d’ingénierie sociale téléphonique, puis utilisés pour se faire passer pour des agents dont l’accès était normalement autorisé.',
     source: 'Zataz / CNIL',
   },
   {
     icon: '🎯',
     title: 'Accès partenaire compromis',
     text:
-      'Les conseillers Cap emploi disposaient d’un accès légitime à une partie de la base de données, notamment au système de recherche d’usagers. L’attaque a profité de ce droit pour aller plus loin que ce qu’un simple accès local aurait permis.',
+      'Les conseillers Cap emploi disposaient d’un accès légitime à une partie de la base de données, notamment au système de recherche d’usagers. L’attaque a exploité ce droit pour aller plus loin que ce qu’un simple accès local aurait normalement permis.',
     source: 'Zataz',
   },
   {
     icon: '📞',
     title: 'Vishing',
     text:
-      'Le point central semble être une tentative d’ingénierie sociale par téléphone visant des conseillers. Une fois les identifiants récupérés, les attaquants ont essayé d’usurper leur identité pour accéder à la base centrale.',
+      'L’attaque a commencé par une tentative d’ingénierie sociale par téléphone ciblant des conseillers. Une fois les identifiants récupérés, les pirates ont usurpé leur identité pour atteindre la base centrale.',
     source: 'Zataz / CNIL',
   },
 ]
@@ -34,14 +34,14 @@ const vuln = [
     icon: '🧱',
     title: 'Gestion des droits trop laxistes',
     text:
-      'Les droits accordés aux comptes partenaires étaient trop larges par rapport au besoin réel. Cela a permis à un accès légitime de devenir beaucoup plus dangereux qu’il ne devait l’être.',
+      'Les droits accordés aux comptes partenaires étaient trop larges par rapport au besoin réel. Un accès normalement autorisé a alors pu devenir beaucoup plus dangereux qu’il ne devait l’être.',
     source: 'France Travail',
   },
   {
     icon: '🚨',
     title: 'Absence de détection en temps réel',
     text:
-      'Il manquait des alertes capables de repérer des requêtes massives ou anormales sur un compte professionnel. Le “scraping” n’a pas été détecté à temps.',
+      'Il manquait des mécanismes d’alerte pour repérer des requêtes massives ou inhabituelles sur un compte professionnel. Le scraping n’a pas été détecté à temps.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
 ]
@@ -72,13 +72,13 @@ function CauseSection() {
       <div className="boit-sous-section">
         <h4 className="h5 fw-bold text-dark mb-3">Chaîne d’attaque</h4>
         <div className="chaine-attaque" aria-label="Chaîne d’attaque">
-          <span className="chaine-etape">Vishing visant des conseillers Cap emploi</span>
+          <span className="chaine-etape">Vishing sur des conseillers Cap emploi</span>
           <span className="fleche-attaque">→</span>
           <span className="chaine-etape">Vol d’identifiants</span>
           <span className="fleche-attaque">→</span>
-          <span className="chaine-etape">Accès à la Base de données</span>
+          <span className="chaine-etape">Accès à la base de données</span>
           <span className="fleche-attaque">→</span>
-          <span className="chaine-etape">Exfiltration massive des données</span>
+          <span className="chaine-etape">Exfiltration massive de données</span>
         </div>
       </div>
 
