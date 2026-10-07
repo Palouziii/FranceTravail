@@ -8,14 +8,14 @@ const remediations = [
   },
   {
     icon: '🚧',
-    title: 'Moindre privilège et cloisonnement applicatif',
+    title: 'Moindre privilège',
     text:
       'Les droits d’accès doivent être réduits au strict nécessaire. Au niveau applicatif, un compte compromis ne doit pas pouvoir atteindre des données en dehors de son périmètre fonctionnel.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '📡',
-    title: 'Surveillance comportementale et blocage du scraping',
+    title: 'Surveillance et blocage du scraping',
     text:
       'Les systèmes de surveillance doivent repérer les connexions anormales, les requêtes massives et les téléchargements inhabituels. Cela permet de stopper une exfiltration avant qu’elle ne s’étende trop largement.',
     source: 'Bonne pratique recommandée par l’ANSSI',

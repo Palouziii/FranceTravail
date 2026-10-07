@@ -92,7 +92,7 @@ function ContexteSection() {
       <div className="chronologie-bloc mt-4">
         <h4 className="h5 fw-bold text-dark mb-3">Suite réglementaire de l’incident</h4>
         <p className="mb-2 text-secondary">
-          Le 22 janvier 2026, la <a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">CNIL a infligé une amende de 5 millions d’euros</a> à France Travail, en se fondant sur l’<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">article 32</a> du RGPD. L’autorité a constaté plusieurs failles de sécurité, notamment :
+          Le 22 janvier 2026, la <a className="lien-article" href="https://www.cnil.fr/fr/violation-de-donnees-sanction-5millions-france-travail" target="_blank" rel="noreferrer">CNIL a infligé une amende de 5 millions d’euros</a> à France Travail, en se fondant sur l’<a className="lien-article" href="https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4#Article32" target="_blank" rel="noreferrer">article 32</a> du RGPD. L’autorité a constaté plusieurs failles de sécurité, notamment :
         </p>
         <ul className="liste-sans-puce text-secondary">
           <li><strong>Absence de double authentification (MFA) :</strong> les partenaires externes pouvaient se connecter à la base nationale avec un simple identifiant et un mot de passe, sans validation supplémentaire.</li>
