@@ -50,40 +50,34 @@ function ContexteSection() {
           <li>
             <span className="date-chronologie">Janvier – début février 2024</span>
             <p>
-              Les attaquants ciblent des conseillers du réseau Cap emploi par une tentative d’ingénierie sociale téléphonique.
-              L’objectif est simple : récupérer des identifiants et des mots de passe dans un environnement professionnel qui paraît crédible et peu surveillé.
+               Tout commence par du social engineering au téléphone. Les attaquants appellent des conseillers Cap emploi en se faisant passer pour un collègue ou un interlocuteur interne. Le but : récupérer des identifiants et des mots de passe.
             </p>
           </li>
           <li>
             <span className="date-chronologie">6 février 2024</span>
             <p>
-              La première connexion suspecte est enregistrée dans le système d’information central. À partir de ce moment, les pirates utilisent des comptes légitimes pour pénétrer le système sans passer par une faille classique.
-            </p>
+Première connexion suspecte. À partir de là, les pirates entrent avec des comptes valides. Pas de faille technique exploitée, pas d'exploit : juste des identifiants volés.            </p>
           </li>
           <li>
             <span className="date-chronologie">6 février – 5 mars 2024</span>
             <p>
-              L’extraction a duré plusieurs semaines. Les pirates se font passer pour des conseillers et lancent des requêtes massives pour récupérer des blocs entiers de données civiles, profitant de droits trop larges par rapport à leur besoin réel.
-              Le point critique est qu’aucune alerte n’a été déclenchée face à ce volume anormal de consultations et de téléchargements.
+              Pendant un mois, ils lancent des requêtes en masse et récupèrent des blocs entiers de données d'état civil. Ils en profitent parce que les droits d'accès étaient beaucoup trop larges par rapport à ce dont un conseiller a réellement besoin. Et surtout : aucune alerte ne s'est déclenchée, malgré le volume de téléchargements.
             </p>
           </li>
           <li>
             <span className="date-chronologie">8 mars 2024</span>
             <p>
-              Les équipes techniques de France Travail finissent par détecter l’activité suspecte, bloquent les comptes compromis et notifient officiellement la violation de données à la CNIL. Elles alertent aussi l’ANSSI.
-            </p>
+Les équipes techniques repèrent enfin l'activité, bloquent les comptes compromis et notifient la CNIL. L'ANSSI est également alertée.            </p>
           </li>
           <li>
             <span className="date-chronologie">13 mars 2024</span>
             <p>
-              L’incident est révélé publiquement. France Travail et Cap emploi annoncent officiellement la fuite de données et déposent une plainte pénale auprès de la section cyber du parquet de Paris.
-            </p>
+L'affaire sort publiquement. France Travail et Cap emploi annoncent la fuite et déposent plainte auprès de la section cyber du parquet de Paris.            </p>
           </li>
           <li>
             <span className="date-chronologie">17–19 mars 2024</span>
             <p>
-              Entre le 17 et le 19 mars, trois jeunes Français âgés de 21 à 23 ans sont interpellés à Valence et à Lyon. Ils sont mis en examen et placés en détention dans le cadre d’une affaire de cybercriminalité liée à la revente de données et à des escroqueries financières.
-            </p>
+Trois Français de 21 à 23 ans sont interpellés à Valence et à Lyon. Ils sont mis en examen et placés en détention, dans un dossier lié à la revente de données et à des escroqueries financières.            </p>
           </li>
         </ol>
         <small className="source-label d-block mt-3">Sources : France Travail / CNIL / ANSSI / Le Monde</small>

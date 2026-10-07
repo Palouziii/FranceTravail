@@ -1,12 +1,5 @@
 const faille = [
   {
-    icon: '🔑',
-    title: 'Compromission des identifiants',
-    text:
-      'Les identifiants de conseillers Cap emploi ont été obtenus via une tentative d’ingénierie sociale téléphonique, puis utilisés pour se faire passer pour des agents dont l’accès était normalement autorisé.',
-    source: 'Zataz / CNIL',
-  },
-  {
     icon: '🎯',
     title: 'Accès partenaire compromis',
     text:
@@ -15,9 +8,9 @@ const faille = [
   },
   {
     icon: '📞',
-    title: 'Vishing',
+    title: 'Vishing et vol d’identifiants',
     text:
-      'L’attaque a commencé par une tentative d’ingénierie sociale par téléphone ciblant des conseillers. Une fois les identifiants récupérés, les pirates ont usurpé leur identité pour atteindre la base centrale.',
+      'Selon Zataz, l’attaque aurait démarré par de l’ingénierie sociale par téléphone : les pirates appellent des conseillers Cap emploi en se faisant passer pour un interlocuteur interne, et récupèrent leurs identifiants. Ils s’en servent ensuite pour se connecter à la base centrale en passant pour des agents légitimes.',
     source: 'Zataz / CNIL',
   },
 ]
@@ -27,21 +20,21 @@ const vuln = [
     icon: '🔐',
     title: 'MFA absent ou insuffisant',
     text:
-      'L’absence d’une authentification forte sur les accès distants des partenaires externes a facilité la compromission des comptes. Un simple identifiant et un mot de passe ne suffisent pas face à une usurpation ciblée.',
+      'Aucune authentification forte sur les accès distants des partenaires externes. Un identifiant et un mot de passe suffisaient : un mot de passe volé donnait donc un accès complet, sans second facteur pour bloquer l’usurpation.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
   {
     icon: '🧱',
     title: 'Gestion des droits trop laxistes',
     text:
-      'Les droits accordés aux comptes partenaires étaient trop larges par rapport au besoin réel. Un accès normalement autorisé a alors pu devenir beaucoup plus dangereux qu’il ne devait l’être.',
+      'Les droits accordés aux comptes partenaires dépassaient largement le besoin réel. Un compte légitime pouvait interroger la base bien au-delà de son périmètre géographique et métier.',
     source: 'France Travail',
   },
   {
     icon: '🚨',
     title: 'Absence de détection en temps réel',
     text:
-      'Il manquait des mécanismes d’alerte pour repérer des requêtes massives ou inhabituelles sur un compte professionnel. Le scraping n’a pas été détecté à temps.',
+      'Aucun mécanisme d’alerte sur des requêtes massives ou inhabituelles depuis un compte professionnel. L’exfiltration a tourné un mois sans déclencher la moindre alerte.',
     source: 'Bonne pratique recommandée par l’ANSSI',
   },
 ]
@@ -76,13 +69,13 @@ function CauseSection() {
           <span className="fleche-attaque">→</span>
           <span className="chaine-etape">Vol d’identifiants</span>
           <span className="fleche-attaque">→</span>
-          <span className="chaine-etape">Accès à la base de données</span>
+          <span className="chaine-etape">Connexion à la base nationale</span>
           <span className="fleche-attaque">→</span>
           <span className="chaine-etape">Exfiltration massive de données</span>
         </div>
       </div>
 
-      <div className="boit-sous-section">
+      <div className="boit-so us-section">
         <h4 className="h5 fw-bold text-dark mb-3 mt-4">Vulnérabilités du système</h4>
         <div className="row g-4">
           {vuln.map((item) => (
